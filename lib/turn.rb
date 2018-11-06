@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 def turn(board)
   puts "Please enter 1-9:"
   input = gets.strip
@@ -17,11 +18,38 @@ end
 def input_to_index(user_input)
   user_input = user_input.to_i
   index = user_input - 1
+=======
+def turn(input)
+  puts "Please enter 1-9:"
+  input = gets.strip
+  index = input - 1
+  if (index >= 1 && index <= 9)
+    display_board(board)
+  else
+    try_again(input)
+    until (index >= 1 && index <= 9)
+    end
+  end
+end
+
+
+def valid_move_police(valid_move, display_board)
+  if valid_move?(board, index) == true
+    display_board(board, index)
+  else 
+    until valid_move?(board, index) == true
+    try_again(input)
+    end
+  end
+>>>>>>> c87b88a9ace20ed25e921ac157953b6570595d22
 end
 
 def try_again(input)
   input = gets.strip
+<<<<<<< HEAD
   input = input.to_i
+=======
+>>>>>>> c87b88a9ace20ed25e921ac157953b6570595d22
   index = input - 1
 end
 
@@ -29,7 +57,10 @@ end
 
 # code your #valid_move? method here
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> c87b88a9ace20ed25e921ac157953b6570595d22
 def valid_move?(board, index)
   if ((position_taken?(board, index) == false) && (index.between?(0,8) == true))
     return true
